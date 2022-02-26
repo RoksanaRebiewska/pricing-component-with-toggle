@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+
+import Pricing from './components/Pricing';
+import PlansBox from './components/PlansBox';
 
 function App() {
+  const [monthly, setMonthly] = useState(true);
+
+  const switchHandler = () => {
+    setMonthly((prevState) => !prevState);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Pricing onClickHandler={switchHandler} />
+      <PlansBox monthly={monthly} />
     </div>
   );
 }

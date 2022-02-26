@@ -1,0 +1,13 @@
+.plans-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
+@media (max-width: 992px) {
+  .plans-box {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,131 @@
+.card {
+  width: 300px;
+  height: 500px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #484e5e;
+  transition: all .3s linear;
+  z-index: 1;
+}
+
+.card.main {
+  background: linear-gradient(145deg, #a1a5ef, #696fdd);
+  color: #fff;
+  height: 540px;
+}
+
+.card:hover {
+  background: linear-gradient(145deg, #fff, #c8cbfa);
+}
+
+.card.main:hover {
+  background: linear-gradient(145deg, #696fdd, #1a1f7b);
+}
+
+@media (max-width: 992px) {
+  .card {
+    margin: 20px 0;
+    height: auto;
+  }
+
+  .card.main {
+    height: auto;
+  }
+}
+
+.card h2 {
+  font-size: 1rem;
+}
+
+.card h3 {
+  font-size: 3rem;
+  margin: 20px;
+}
+
+.card h3 span {
+  font-size: 2rem;
+}
+
+.card p {
+  border-bottom: 1px solid #484e5e;
+  padding-bottom: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.card p:first-of-type {
+  border-top: 1px solid #484e5e;
+  padding-top: 20px;
+}
+
+.card.main p {
+  border-bottom: 1px solid #fff;
+}
+
+.card.main p:first-of-type {
+  border-top: 1px solid #fff;
+}
+
+.card button {
+  background: linear-gradient(145deg, #a1a5ef, #696fdd);
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 20px;
+  width: 250px;
+  transition: all .3s linear;
+}
+
+.card button:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #696fdd;
+  border: 1px solid #696fdd;
+}
+
+.card.main button {
+  background: #fff;
+  color: #696fdd;
+  border: 1px solid transparent;
+}
+
+.card.main button:hover {
+  background: linear-gradient(145deg, #a1a5ef, #696fdd);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.card #tooltip {
+  display: none;
+  border: none;
+  color: #484e5e;
+  padding: 10px;
+  background: #a1a5ef;
+  border-radius: 10px;
+  font-size: .8rem;
+  width: 150px;
+}
+
+.card.visible #tooltip {
+  display: block;
+  position: absolute;
+  bottom: 60px;
+  margin-left: 80px;
+}
+
+.card.visible.main #tooltip {
+  bottom: 45px;
+}
+
+@media (max-width: 992px) {
+  .card.visible #tooltip, .card.visible.main #tooltip {
+    position: relative;
+    bottom: 20px;
+    margin-left: 0;
+  }
+}
